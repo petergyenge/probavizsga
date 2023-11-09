@@ -11,11 +11,11 @@ const LaptopComponent = ({ brand, name, weight }: Laptops) => {
 
   return (
     <div className="flex flex-col items-center ">
-      <h2 className="card-title p-2">{brand}</h2>
+      <h2 className="card-title p-2">{name}</h2>
       {moreButton &&
         <ul>
-          <li className='pr-3'>{name}</li>
-          <li>{weight}</li>
+          <li className='pr-3'>{brand}</li>
+          <li>{weight} kg</li>
         </ul>
       }
       <button className='btn btn-primary'
