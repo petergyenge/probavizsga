@@ -7,7 +7,7 @@ const client = axios.create({
 
 const _searchLaptops = async (inputValue?: string): Promise<AxiosResponse | null> => {
   try {
-    const response = await client.get("/vet/clients", { params: {search: inputValue} },);
+    const response = await client.get("/api/laptop", { params: {name: inputValue} },);
     return response;
   } catch (error) {
     return (error as AxiosError).response || null;
